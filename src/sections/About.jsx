@@ -31,7 +31,7 @@ export default function About() {
         <div className="flex flex-col md:flex-row gap-16 text-bw8 mt-30">
           
           {/* Left Text */}
-          <div className="flex-1 max-w-[710px] space-y-6 text-b2">
+          <div className="flex-2 max-w-[710px] space-y-6 text-b2">
             <p>
               PT Kencana Jaya Persada adalah perusahaan pelaksana konstruksi dan
               penyedia layanan logistik proyek yang berbasis di Pekanbaru.
@@ -57,9 +57,8 @@ export default function About() {
               src={aboutImg}
               alt="Gedung Perusahaan"
               className="
-                w-full max-w-[520px]
+                w-full max-w-[440px]
                 object-cover
-                rounded-sm
               "
             />
           </div>
