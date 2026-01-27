@@ -7,9 +7,9 @@ function Home() {
   return (
     <>
       <Navbar />
-      <HeroSection />
+      {/* <HeroSection />
       <AboutSection />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }
