@@ -3,7 +3,7 @@ import aboutImg from "../assets/images/about.webp";
 
 export default function About() {
   return (
-    <section className="w-full bg-bw2">
+    <section className="w-full text-bw8">
       <div
         className="
           max-w-[1440px] mx-120 py-120
