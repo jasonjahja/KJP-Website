@@ -7,8 +7,6 @@ export default function About() {
       <div
         className="
           max-w-[1440px] mx-120 py-120
-          min-h-screen
-          flex flex-col justify-center
         "
       >
         {/* HEADER (FULL WIDTH) */}

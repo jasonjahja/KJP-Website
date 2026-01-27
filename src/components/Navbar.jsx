@@ -20,7 +20,7 @@ function Navbar() {
         transition-all duration-300 ease-in-out
         ${
           scrolled
-            ? "bg-bw1 border-b border-bw3 shadow-navbar text-bw8"
+            ? "bg-bw1 border-b border-bw5 shadow-navbar text-bw8"
             : "bg-transparent border-transparent shadow-none text-bw1"
         }
       `}

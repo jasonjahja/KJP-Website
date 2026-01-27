@@ -13,8 +13,6 @@ export default function Services() {
       <div
         className="
           max-w-[1440px] mx-120 py-120
-          min-h-screen
-          flex flex-col justify-center
         "
       >
         {/* HEADER (FULL WIDTH) */}
@@ -32,7 +30,7 @@ export default function Services() {
             Layanan Konstruksi, Logistik, dan Suplai Material Proyek
           </h1>
 
-          <p className="mt-15 text-b1">
+          <p className="mt-15 text-b2">
             Kami menangani berbagai kebutuhan proyek dengan dukungan tim profesional,
             armada operasional modern, dan proses kerja yang terstruktur untuk memastikan
             mutu pekerjaan yang tinggi.
