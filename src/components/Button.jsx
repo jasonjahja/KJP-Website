@@ -1,17 +1,31 @@
-function Button({ children, variant = "primary" }) {
+function Button({
+  children,
+  variant = "primary",
+  px = "px-30",
+  py = "py-10",
+  text = "text-s1",
+}) {
   const base =
-    "px-30 py-10 text-s1 shadow-button transition focus:outline-none hover:cursor-pointer";
+    "shadow-button transition focus:outline-none hover:cursor-pointer";
 
   const variants = {
     primary:
-      "bg-primary text-bw01 hover:bg-primary/90 shadow-button",
+      "bg-primary text-bw1 hover:bg-primary/90",
 
     secondary:
-      "border border-primary text-primary bg-transparent hover:bg-primary hover:text-bw01 shadow-button",
+      "border-[3px] border-primary text-primary bg-transparent hover:bg-primary hover:text-bw1",
   };
 
   return (
-    <button className={`${base} ${variants[variant]}`}>
+    <button
+      className={`
+        ${base}
+        ${px}
+        ${py}
+        ${text}
+        ${variants[variant]}
+      `}
+    >
       {children}
     </button>
   );
