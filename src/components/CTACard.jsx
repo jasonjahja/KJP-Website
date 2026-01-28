@@ -1,4 +1,5 @@
 import CTABg from "../assets/images/cta-bg.webp";
+import CTABgSm from "../assets/images/cta-bg-sm.webp";
 import ulBorder from "../assets/images/u-l-border.webp";
 import brBorder from "../assets/images/b-r-border.webp";
 import ulBorderSm from "../assets/images/u-l-border-sm.webp";
@@ -7,13 +8,21 @@ import Button from "./Button";
 
 function CTACard() {
   return (
-    <div className="relative mx-120 w-full overflow-hidden bg-bw1 shadow-card border border-bw5">
+    <div className="relative mx-25 md:mx-120 w-full overflow-hidden bg-bw1 shadow-card border border-bw5">
       
       {/* Background image */}
+      {/* Mobile background */}
+      <img
+        src={CTABgSm}
+        alt="CTA Background Mobile"
+        className="absolute inset-0 h-full w-full object-cover opacity-20 md:hidden"
+      />
+
+      {/* Desktop background */}
       <img
         src={CTABg}
-        alt="CTA Background"
-        className="absolute inset-0 h-full w-full object-cover opacity-20"
+        alt="CTA Background Desktop"
+        className="absolute inset-0 h-full w-full object-cover opacity-20 hidden md:block"
       />
 
       {/* Decorative Borders */}
@@ -57,16 +66,16 @@ function CTACard() {
         </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center gap-25 px-20 py-60 text-center">
-        <h2 className="text-h4 text-bw8">
+      <div className="relative z-10 flex flex-col items-center justify-center gap-25 px-15 md:px-20 py-30 md:py-60 text-center">
+        <h2 className="text-s1 md:text-h4 text-bw8">
           Punya kebutuhan proyek tertentu? Kami siap membantu.
         </h2>
 
         <Button
         variant="primary"
-        px="px-45"
-        py="py-15"
-        text="text-h7"
+        px="px-30 md:px-45"
+        py="py-10 md:py-15"
+        text="text-s2 md:text-h7"
         href="#footer"
         >
             Konsultasi Proyek
