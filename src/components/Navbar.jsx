@@ -55,7 +55,7 @@ function Navbar() {
           <a href="#faq" className="text-b4 hover:text-primary transition">
             FAQ
           </a>
-          <Button variant="primary">
+          <Button href="#footer">
             Konsultasi Proyek
           </Button>
         </nav>

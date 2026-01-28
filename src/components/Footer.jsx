@@ -2,7 +2,7 @@ import Button from "./Button";
 
 function Footer() {
   return (
-    <footer className="w-full bg-secondary px-120 py-60 max-w-[1440px]">
+    <footer id="footer" className="w-full bg-secondary px-120 py-60 max-w-[1440px]">
         {/* TOP */}
         <div className="flex flex-col gap-60 text-bw1 md:flex-row md:gap-0 md:justify-between">
           {/* LEFT — Company Info */}
@@ -60,7 +60,7 @@ function Footer() {
                 </a>
 
                 <a
-                    href="#testimoni"
+                    href="#testimonials"
                     className="hover:text-primary transition"
                 >
                     Testimoni
@@ -114,7 +114,7 @@ function Footer() {
             py="py-15"
             text="text-h7"
             >
-                Konsultasi proyek
+                Konsultasi Proyek
             </Button>
           </div>
         </div>

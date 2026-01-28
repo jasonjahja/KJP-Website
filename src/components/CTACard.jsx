@@ -67,8 +67,9 @@ function CTACard() {
         px="px-45"
         py="py-15"
         text="text-h7"
+        href="#footer"
         >
-            Konsultasi proyek
+            Konsultasi Proyek
         </Button>
       </div>
     </div>

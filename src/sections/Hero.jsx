@@ -45,16 +45,18 @@ export default function Hero() {
             px="px-45"
             py="py-15"
             text="text-h7"
+            href="#footer"
             >
-                Konsultasi proyek
+                Konsultasi Proyek
             </Button>
             <Button
             variant="secondary"
             px="px-45"
             py="py-15"
             text="text-h7"
+            href="#services"
             >
-                Lihat layanan
+                Lihat Layanan
             </Button>
             </div>
 
