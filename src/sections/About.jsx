@@ -6,30 +6,30 @@ export default function About() {
     <section id="about" className="w-full text-bw8">
       <div
         className="
-          max-w-[1440px] mx-120 py-120
+          max-w-[1440px] mx-25 my-60 md:m-120
         "
       >
         {/* HEADER (FULL WIDTH) */}
         <div>
           {/* Label */}
           <div className="flex items-center gap-5">
-            <img src={aboutIcon} alt="Tentang Kami" className="h-25 text-primary" />
-            <span className="text-h8 text-bw8">
+            <img src={aboutIcon} alt="Tentang Kami" className="h-[14px] md:h-25 text-primary" />
+            <span className="text-s4 md:text-h8">
               Tentang Kami
             </span>
           </div>
 
           {/* Title */}
-          <h1 className="text-h4 mt-15">
+          <h1 className="text-h8 md:text-h4 mt-15">
             Berpengalaman Mendukung Proyek Sejak 2012
           </h1>
         </div>
 
         {/* CONTENT (TEXT LEFT – IMAGE RIGHT) */}
-        <div className="flex flex-col md:flex-row gap-16 text-bw8 mt-30">
+        <div className="flex flex-col-reverse md:flex-row gap-25 md:gap-60 mt-25 md:mt-30">
           
           {/* Left Text */}
-          <div className="flex-2 max-w-[710px] space-y-6 text-b2">
+          <div className="flex-2 max-w-[710px] space-y-4 md:space-y-6 text-b5 md:text-b2">
             <p>
               PT Kencana Jaya Persada adalah perusahaan pelaksana konstruksi dan
               penyedia layanan logistik proyek yang berbasis di Pekanbaru.
@@ -50,12 +50,13 @@ export default function About() {
           </div>
 
           {/* Right Image */}
-          <div className="flex-1 flex justify-end">
+          <div className="flex-1 flex justify-center md:justify-end">
             <img
               src={aboutImg}
               alt="Gedung Perusahaan"
               className="
-                w-full max-w-[440px]
+                w-[75%]
+                md:w-full 
                 object-cover
               "
             />
