@@ -3,6 +3,7 @@ import About from "./sections/About";
 import CTA from "./sections/CTA";
 import FAQ from "./sections/FAQ";
 import Hero from "./sections/Hero";
+import Location from "./sections/Location";
 import Services from "./sections/Services";
 import Testimonial from "./sections/Testimonials";
 
@@ -16,6 +17,7 @@ function App() {
       <CTA />
       <Testimonial />
       <FAQ />
+      <Location />
     </>
   );
 }
