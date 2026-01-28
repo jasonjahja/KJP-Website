@@ -3,7 +3,7 @@ import heroImg from "../assets/images/hero.webp";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section id="hero" className="relative h-screen w-full overflow-hidden">
       
       {/* Background Image */}
       <img

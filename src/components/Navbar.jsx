@@ -6,9 +6,14 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 80);
+      if (window.scrollY <= 80) {
+        setScrolled(false);
+      } else {
+        setScrolled(true);
+      }
     };
 
+    handleScroll(); // run once on mount
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);

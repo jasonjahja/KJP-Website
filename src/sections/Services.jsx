@@ -7,9 +7,48 @@ import serviceImg5 from "../assets/images/services-5.webp";
 import serviceImg6 from "../assets/images/services-6.webp";
 import ServiceCard from "../components/ServiceCard";
 
+const services = [
+  {
+    image: serviceImg1,
+    title: "Konstruksi Gedung",
+    description:
+      "Pembangunan gedung komersial, fasilitas publik, dan bangunan pendukung proyek.",
+  },
+  {
+    image: serviceImg2,
+    title: "Infrastruktur Air & Drainase",
+    description:
+      "Saluran air, drainase, dan infrastruktur air lainnya.",
+  },
+  {
+    image: serviceImg3,
+    title: "Konstruksi Jalan & Infrastruktur",
+    description:
+      "Pekerjaan jalan, perkerasan, dan infrastruktur sipil pendukung kawasan.",
+  },
+  {
+    image: serviceImg4,
+    title: "Elektrikal Sipil",
+    description:
+      "Instalasi elektrikal untuk proyek infrastruktur dan kawasan industri.",
+  },
+  {
+    image: serviceImg5,
+    title: "Jembatan & Terowongan",
+    description:
+      "Pekerjaan jembatan, jalan layang, dan struktur sipil berat.",
+  },
+  {
+    image: serviceImg6,
+    title: "Logistik Proyek & Transportasi",
+    description:
+      "Rental transportasi darat & air, logistik material, dan dukungan operasional proyek.",
+  },
+];
+
 export default function Services() {
   return (
-    <section className="w-full bg-bw3 text-bw8">
+    <section id="services" className="w-full bg-bw3 text-bw8">
       <div
         className="
           max-w-[1440px] mx-120 py-120
@@ -39,41 +78,9 @@ export default function Services() {
 
         {/* Cards */}
         <div className="mt-60 grid grid-cols-3 gap-15">
-          <ServiceCard
-            image={serviceImg1}
-            title="Konstruksi Gedung"
-            description="Pembangunan gedung komersial, fasilitas publik, dan bangunan pendukung proyek."
-          />
-
-          <ServiceCard
-            image={serviceImg2}
-            title="Infrastruktur Air & Drainase"
-            description="Saluran air, drainase, dan infrastruktur air lainnya."
-          />
-
-          <ServiceCard
-            image={serviceImg3}
-            title="Konstruksi Jalan & Infrastruktur"
-            description="Pekerjaan jalan, perkerasan, dan infrastruktur sipil pendukung kawasan."
-          />
-
-          <ServiceCard
-            image={serviceImg4}
-            title="Elektrikal Sipil"
-            description="Instalasi elektrikal untuk proyek infrastruktur dan kawasan industri."
-          />
-
-          <ServiceCard
-            image={serviceImg5}
-            title="Jembatan & Terowongan"
-            description="Pekerjaan jembatan, jalan layang, dan struktur sipil berat."
-          />
-
-          <ServiceCard
-            image={serviceImg6}
-            title="Logistik Proyek & Transportasi"
-            description="Rental transportasi darat & air, logistik material, dan dukungan operasional proyek."
-          />
+          {services.map((service, index) => (
+            <ServiceCard key={index} {...service} />
+          ))}
         </div>
       </div>
     </section>
