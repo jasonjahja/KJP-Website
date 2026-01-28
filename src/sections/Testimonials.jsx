@@ -103,7 +103,7 @@ export default function Testimonial() {
   }, [index]);
 
   return (
-    <section className="w-full py-120 text-bw8">
+    <section id="testimoni" className="w-full py-120 text-bw8">
         
         {/* HEADER (FULL WIDTH) */}
         <div className="mx-120">

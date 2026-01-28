@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import About from "./sections/About";
 import CTA from "./sections/CTA";
@@ -18,6 +19,7 @@ function App() {
       <Testimonial />
       <FAQ />
       <Location />
+      <Footer />
     </>
   );
 }

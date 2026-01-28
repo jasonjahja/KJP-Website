@@ -58,7 +58,6 @@ function Navbar() {
           <Button variant="primary">
             Konsultasi Proyek
           </Button>
-
         </nav>
 
       </div>
