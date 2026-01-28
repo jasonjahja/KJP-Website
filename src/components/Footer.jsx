@@ -42,7 +42,7 @@ function Footer() {
                     href="#hero"
                     className="hover:text-primary transition"
                 >
-                    Beranda
+                    Overview
                 </a>
 
                 <a

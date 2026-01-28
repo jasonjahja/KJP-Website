@@ -18,12 +18,12 @@ export default function Hero() {
       <div className="relative z-10 flex h-full items-center">
         <div
           className="
-            mx-25 max-w-[700px] text-bw1 mt-82
+            mx-25 max-w-[700px] text-bw1 mt-[66px] md:mt-82
             md:mx-120
           "
         >
           {/* Title */}
-          <h1 className="text-h7 md:text-h3">
+          <h1 className="text-h6 md:text-h3">
             Solusi Konstruksi dan Logistik
             <br />
             Proyek Terpercaya
@@ -74,7 +74,7 @@ export default function Hero() {
               mx-auto
               w-fit
               flex flex-col gap-5
-              md:flex-row md:items-center md:gap-30
+              md:flex-row md:items-center gap-5 md:gap-30
             "
           >
             <div className="flex items-end gap-10">
