@@ -3,7 +3,7 @@ import Button from "./Button";
 
 import hamburgerIcon from "../assets/icons/hamburger.svg";
 import closeIcon from "../assets/icons/close.svg";
-import logo from "../assets/logo.svg";
+import logo from "/logo.svg";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);

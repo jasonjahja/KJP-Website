@@ -1,5 +1,5 @@
 import Button from "./Button";
-import logo from "../assets/logo.svg";
+import logo from "/logo.svg";
 
 function Footer() {
   return (
