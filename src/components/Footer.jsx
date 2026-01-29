@@ -1,4 +1,5 @@
 import Button from "./Button";
+import logo from "../assets/logo.svg";
 
 function Footer() {
   return (
@@ -12,7 +13,7 @@ function Footer() {
             <div className="space-y-10">
               <a href="#hero" className="flex items-center"> 
                 <img 
-                src="..\src\assets\logo.svg" 
+                src={logo}
                 alt="KJP Logo" 
                 className="h-[42px] xl:h-[54px] w-auto"
                 />
