@@ -18,19 +18,19 @@ export default function Hero() {
       <div className="relative z-10 flex h-full items-center">
         <div
           className="
-            mx-25 max-w-[700px] text-bw1 mt-[66px] md:mt-82
-            md:mx-120
+            mx-25 max-w-[700px] text-bw1 mt-[66px] xl:mt-82
+            xl:mx-120
           "
         >
           {/* Title */}
-          <h1 className="text-h6 md:text-h3">
+          <h1 className="text-h6 xl:text-h3">
             Solusi Konstruksi dan Logistik
             <br />
             Proyek Terpercaya
           </h1>
 
           {/* Description */}
-          <p className="mt-15 text-b5 md:text-b1">
+          <p className="mt-15 text-b5 xl:text-b1">
             PT Kencana Jaya Persada adalah perusahaan pelaksana konstruksi dan
             penyedia layanan logistik proyek yang melayani pembangunan gedung,
             infrastruktur sipil, serta suplai material tambang.
@@ -41,16 +41,16 @@ export default function Hero() {
             className="
               mt-30
               flex flex-col gap-15
-              md:inline-grid md:grid-flow-col md:auto-cols-fr md:mt-45
+              xl:inline-grid xl:grid-flow-col xl:auto-cols-fr xl:mt-45
             "
           >
             <Button
               variant="primary"
               px="px-45"
-              py="py-10 md:py-15"
-              text="text-s2 md:text-h7"
+              py="py-10 xl:py-15"
+              text="text-s2 xl:text-h7"
               href="#footer"
-              className="w-full md:w-auto"
+              className="w-full xl:w-auto"
             >
               Konsultasi Proyek
             </Button>
@@ -58,10 +58,10 @@ export default function Hero() {
             <Button
               variant="secondary"
               px="px-45"
-              py="py-10 md:py-15"
-              text="text-s2 md:text-h7"
+              py="py-10 xl:py-15"
+              text="text-s2 xl:text-h7"
               href="#services"
-              className="w-full md:w-auto"
+              className="w-full xl:w-auto"
             >
               Lihat Layanan
             </Button>
@@ -74,19 +74,19 @@ export default function Hero() {
               mx-auto
               w-fit
               flex flex-col gap-5
-              md:flex-row md:items-center gap-5 md:gap-30
+              xl:flex-row xl:items-center gap-5 xl:gap-30
             "
           >
             <div className="flex items-end gap-10">
               <p className="text-h3 text-primary">13+</p>
-              <p className="text-b3 md:text-b1">Tahun Pengalaman</p>
+              <p className="text-b3 xl:text-b1">Tahun Pengalaman</p>
             </div>
 
-            <div className="hidden md:block h-12 w-px bg-white/60" />
+            <div className="hidden xl:block h-12 w-px bg-white/60" />
 
             <div className="flex items-end gap-10">
               <p className="text-h3 text-primary">50+</p>
-              <p className="text-b3 md:text-b1">Tim Profesional</p>
+              <p className="text-b3 xl:text-b1">Tim Profesional</p>
             </div>
           </div>
 

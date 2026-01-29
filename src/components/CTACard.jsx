@@ -8,21 +8,21 @@ import Button from "./Button";
 
 function CTACard() {
   return (
-    <div className="relative mx-25 md:mx-120 w-full overflow-hidden bg-bw1 shadow-card border border-bw5">
+    <div className="relative mx-25 xl:mx-120 w-full overflow-hidden bg-bw1 shadow-card border border-bw5">
       
       {/* Background image */}
       {/* Mobile background */}
       <img
         src={CTABgSm}
         alt="CTA Background Mobile"
-        className="absolute inset-0 h-full w-full object-cover opacity-20 md:hidden"
+        className="absolute inset-0 h-full w-full object-cover opacity-20 xl:hidden"
       />
 
       {/* Desktop background */}
       <img
         src={CTABg}
         alt="CTA Background Desktop"
-        className="absolute inset-0 h-full w-full object-cover opacity-20 hidden md:block"
+        className="absolute inset-0 h-full w-full object-cover opacity-20 hidden xl:block"
       />
 
       {/* Decorative Borders */}
@@ -34,7 +34,7 @@ function CTACard() {
             alt=""
             className="
             absolute left-15 top-15
-            hidden md:block
+            hidden xl:block
             "
         />
         <img
@@ -42,7 +42,7 @@ function CTACard() {
             alt=""
             className="
             absolute left-10 top-10
-            block md:hidden
+            block xl:hidden
             "
         />
 
@@ -52,7 +52,7 @@ function CTACard() {
             alt=""
             className="
             absolute right-15 bottom-15
-            hidden md:block
+            hidden xl:block
             "
         />
         <img
@@ -60,22 +60,22 @@ function CTACard() {
             alt=""
             className="
             absolute right-10 bottom-10
-            block md:hidden
+            block xl:hidden
             "
         />
         </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center gap-25 px-15 md:px-20 py-30 md:py-60 text-center">
-        <h2 className="text-s1 md:text-h4 text-bw8">
+      <div className="relative z-10 flex flex-col items-center justify-center gap-25 px-15 xl:px-20 py-30 xl:py-60 text-center">
+        <h2 className="text-s1 xl:text-h4 text-bw8">
           Punya kebutuhan proyek tertentu? Kami siap membantu.
         </h2>
 
         <Button
         variant="primary"
-        px="px-30 md:px-45"
-        py="py-10 md:py-15"
-        text="text-s2 md:text-h7"
+        px="px-30 xl:px-45"
+        py="py-10 xl:py-15"
+        text="text-s2 xl:text-h7"
         href="#footer"
         >
             Konsultasi Proyek

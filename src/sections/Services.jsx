@@ -48,23 +48,23 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="w-full bg-bw3 text-bw8 max-w-[1440px] px-25 py-60 md:p-120">
+    <section id="services" className="w-full bg-bw3 text-bw8 max-w-[1440px] px-25 py-60 xl:p-120">
       {/* HEADER (FULL WIDTH) */}
       <div className="items-center text-center">
         {/* Label */}
         <div className="flex gap-5 justify-center items-center">
-          <img src={serviceIcon} alt="Layanan" className="h-[14px] md:h-25 text-primary" />
-          <span className="text-s3 md:text-h8">
+          <img src={serviceIcon} alt="Layanan" className="h-[14px] xl:h-25 text-primary" />
+          <span className="text-s3 xl:text-h8">
             Layanan
           </span>
         </div>
 
         {/* Title */}
-        <h1 className="text-h8 md:text-h4 mt-15">
+        <h1 className="text-h8 xl:text-h4 mt-15">
           Layanan Konstruksi, Logistik, dan Suplai Material Proyek
         </h1>
 
-        <p className="mt-15 text-b5 md:text-b2">
+        <p className="mt-15 text-b5 xl:text-b2">
           Kami menangani berbagai kebutuhan proyek dengan dukungan tim profesional,
           armada operasional modern, dan proses kerja yang terstruktur untuk memastikan
           mutu pekerjaan yang tinggi.
@@ -72,7 +72,7 @@ export default function Services() {
       </div>
 
       {/* Cards */}
-      <div className="mt-25 md:mt-60 grid grid-cols-1 md:grid-cols-3 gap-15">
+      <div className="mt-25 xl:mt-60 grid grid-cols-1 xl:grid-cols-3 gap-15">
         {services.map((service, index) => (
           <ServiceCard key={index} {...service} />
         ))}

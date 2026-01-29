@@ -44,95 +44,96 @@ const testimonials = [
 ];
 
 export default function Testimonial() {
-
-  const VISIBLE = 3;
   const BASE = testimonials.length;
   const START_INDEX = BASE;
 
   const [index, setIndex] = useState(START_INDEX);
 
   const viewportRef = useRef(null);
+  const cardRef = useRef(null);
+
   const [viewportWidth, setViewportWidth] = useState(0);
+  const [cardWidth, setCardWidth] = useState(0);
 
   useEffect(() => {
-    if (viewportRef.current) {
-      setViewportWidth(viewportRef.current.offsetWidth);
-    }
-
-    const handleResize = () => {
-      if (viewportRef.current) {
-        setViewportWidth(viewportRef.current.offsetWidth);
-      }
+    const updateSizes = () => {
+      if (viewportRef.current) setViewportWidth(viewportRef.current.offsetWidth);
+      if (cardRef.current) setCardWidth(cardRef.current.offsetWidth);
     };
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    updateSizes(); // 🔥 penting biar ga miring pas awal
+
+    window.addEventListener("resize", updateSizes);
+    return () => window.removeEventListener("resize", updateSizes);
   }, []);
 
-  const CARD_WIDTH = 650;
   const GAP = 15;
-  const STEP = CARD_WIDTH + GAP;
+
+  const STEP = (cardWidth || 650) + GAP;
 
   const offset =
     viewportWidth === 0
       ? 0
-      : index * STEP - viewportWidth / 2 + CARD_WIDTH / 2;
+      : index * STEP - viewportWidth / 2 + (cardWidth || 650) / 2;
 
-  const next = () => {
-    setIndex((prev) => prev + 1);
-  };
+  const next = () => setIndex((prev) => prev + 1);
+  const prev = () => setIndex((prev) => prev - 1);
 
-  const prev = () => {
-    setIndex((prev) => prev - 1);
-  };
-
-  const loopedTestimonials = [
-    ...testimonials,
-    ...testimonials,
-    ...testimonials,
-  ];
+  const loopedTestimonials = [...testimonials, ...testimonials, ...testimonials];
 
   useEffect(() => {
-    const BASE = testimonials.length;
+    if (index < BASE) setIndex((prev) => prev + BASE);
+    else if (index >= BASE * 2) setIndex((prev) => prev - BASE);
+  }, [index, BASE]);
 
-    if (index < BASE) {
-      setIndex((prev) => prev + BASE);
-    } else if (index >= BASE * 2) {
-      setIndex((prev) => prev - BASE);
-    }
-  }, [index]);
+  const startX = useRef(0);
+
+const handleTouchStart = (e) => {
+  startX.current = e.touches[0].clientX;
+};
+
+const handleTouchEnd = (e) => {
+  const endX = e.changedTouches[0].clientX;
+  const diff = startX.current - endX;
+
+  // threshold biar ga ke-trigger cuma scroll kecil
+  if (diff > 50) next();      // swipe kiri -> next
+  else if (diff < -50) prev(); // swipe kanan -> prev
+};
 
   return (
-    <section id="testimonials" className="w-full py-60 md:py-120 text-bw8">
+    <section id="testimonials" className="w-full py-60 xl:py-120 text-bw8">
         
         {/* HEADER (FULL WIDTH) */}
-        <div className="mx-25 md:mx-120">
+        <div className="mx-25 xl:mx-120">
             
             {/* Label */}
             <div className="flex items-center gap-5">
-            <img src={testiIcon} alt="Testimonial" className="h-[14px] md:h-25 text-primary" />
-            <span className="text-s3 md:text-h8 text-bw8">
+            <img src={testiIcon} alt="Testimonial" className="h-[14px] xl:h-25 text-primary" />
+            <span className="text-s3 xl:text-h8 text-bw8">
                 Testimoni
             </span>
             </div>
 
             {/* Title */}
-            <h1 className="text-h8 md:text-h4 mt-15">
+            <h1 className="text-h8 xl:text-h4 mt-15">
                 Pengalaman Klien Bekerja Sama dengan Kami
             </h1>
 
-            <p className="mt-15 text-b5 md:text-b2">
+            <p className="mt-15 text-b5 xl:text-b2">
                 Bukti nyata kualitas layanan kami dari sudut pandang klien yang telah bekerja sama.
             </p>
         </div>
 
         {/* Carousel Section */}
-        <div className="relative mt-25 md:mt-60">
+        <div className="relative mt-25 xl:mt-60">
 
             {/* Track viewport */}
             <div
               ref={viewportRef}
-              className="overflow-hidden"
+              className="overflow-x-hidden overflow-y-visible touch-pan-y select-none"
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
             >
               <div
                 className="flex gap-15 items-stretch transition-transform duration-300"
@@ -141,9 +142,8 @@ export default function Testimonial() {
                 }}
               >
                 {loopedTestimonials.map((item, i) => (
-                  <div key={i} className="flex pb-15">
+                  <div key={i} ref={i === 0 ? cardRef : null} className="flex pb-15">
                     <TestimonialCard
-                      key={i}
                       {...item}
                       current={(i % testimonials.length) + 1}
                       total={testimonials.length}
@@ -155,7 +155,7 @@ export default function Testimonial() {
         </div>
 
         {/* Bottom Row: Summary + Arrows */}
-        <div className="mx-25 md:mx-120 mt-10 md:mt-45 flex items-center justify-between">
+        <div className="mx-25 xl:mx-120 mt-10 xl:mt-45 flex items-center justify-between">
 
             {/* Summary */}
             <div className="flex flex-col gap-5">
@@ -164,21 +164,21 @@ export default function Testimonial() {
               <div className="flex items-center gap-10">
                 <div className="flex">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <img key={i} src={star} alt="star" className="w-[20px] md:w-30" />
+                    <img key={i} src={star} alt="star" className="w-[20px] xl:w-30" />
                   ))}
                 </div>
 
-                <div className="text-h8 md:text-h5 text-primary">Sempurna</div>
+                <div className="text-h8 xl:text-h5 text-primary">Sempurna</div>
               </div>
 
               {/* Row 2: description */}
-              <div className="text-b5 md:text-b1">
-                <span className="text-s2 md:text-h6 text-primary">5.0 </span> <span>dari 5 berdasarkan 5 ulasan</span>
+              <div className="text-b5 xl:text-b1">
+                <span className="text-s2 xl:text-h6 text-primary">5.0 </span> <span>dari 5 berdasarkan 5 ulasan</span>
               </div>
             </div>
 
             {/* Arrows */}
-            <div className="flex gap-30 hidden md:flex">
+            <div className="flex gap-30 hidden xl:flex">
                 <button
                   onClick={prev}
                   className="w-30 shrink-0 flex items-center justify-center hover:cursor-pointer"

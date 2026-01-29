@@ -35,15 +35,15 @@ function Navbar() {
           }
         `}
       >
-        <div className="h-full mx-25 md:mx-120 flex items-center justify-between">
+        <div className="h-full mx-25 xl:mx-120 flex items-center justify-between">
           
           {/* Logo */}
           <a href="#hero" className="flex items-center">
-            <img src={logo} alt="KJP Logo" className="h-[26px] md:h-[36px] w-auto" />
+            <img src={logo} alt="KJP Logo" className="h-[26px] xl:h-[36px] w-auto" />
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-45">
+          <nav className="hidden xl:flex items-center gap-45">
             <a href="#hero" className="text-b4 hover:text-primary transition">
               Overview
             </a>
@@ -62,7 +62,7 @@ function Navbar() {
           {/* Mobile Hamburger */}
           <button
             onClick={() => setOpen(true)}
-            className="md:hidden"
+            className="xl:hidden"
           >
             <img src={hamburgerIcon} alt="Menu" className="w-30" />
           </button>
