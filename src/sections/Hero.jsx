@@ -72,6 +72,7 @@ export default function Hero() {
             className="
               mt-45
               mx-auto
+              xl:mx-0
               w-fit
               flex flex-col gap-5
               xl:flex-row xl:items-center gap-5 xl:gap-30
