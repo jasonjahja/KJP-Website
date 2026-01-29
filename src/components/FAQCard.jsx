@@ -26,16 +26,16 @@ export default function FaqCard({ question, answer, isOpen, onToggle }) {
       <button
         type="button"
         onClick={toggle}
-        className="w-full px-15 py-25 text-left flex flex-col hover:cursor-pointer"
+        className="w-full px-5 md:px-15 py-15 md:py-25 text-left flex flex-col hover:cursor-pointer"
       >
         {/* Row: Question + Chevron */}
         <div className="w-full flex items-center justify-between">
-          <h3 className="text-h6 pr-5">{question}</h3>
+          <h3 className="text-s1 md:text-h6 pr-5">{question}</h3>
 
           <img
             src={chevronDown}
             alt="toggle"
-            className={`w-30 shrink-0 transition-transform duration-300 ${
+            className={`w-30 w-[20px] shrink-0 transition-transform duration-300 ${
               open ? "rotate-180" : "rotate-0"
             }`}
           />
@@ -47,7 +47,7 @@ export default function FaqCard({ question, answer, isOpen, onToggle }) {
           className="overflow-hidden transition-[height] duration-300 ease-in-out"
         >
           <div ref={contentRef} className="pt-15">
-            <p className="text-b2 text-bw7">{answer}</p>
+            <p className="text-b5 md:text-b2 text-bw7">{answer}</p>
           </div>
         </div>
       </button>

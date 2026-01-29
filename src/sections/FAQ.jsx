@@ -84,27 +84,27 @@ export default function FAQ() {
   const visibleFaqs = showAll ? faqs : faqs.slice(0, 6);
 
   return (
-    <section id="faq" className="w-full py-120 text-bw8">
-      <div className="px-120">
+    <section id="faq" className="w-full py-60 md:py-120 text-bw8">
+      <div className="px-25 md:px-120">
 
         {/* HEADER (FULL WIDTH) */}
         <div className="items-center text-center">
             {/* Label */}
-            <div className="flex gap-5 justify-center">
-            <img src={faqIcon} alt="FAQ" className="h-25 text-primary" />
-            <span className="text-h8">
+            <div className="flex gap-5 justify-center items-center">
+            <img src={faqIcon} alt="FAQ" className="h-[14px] md:h-25 text-primary" />
+            <span className="text-s3 md:text-h8">
                 FAQ
             </span>
             </div>
 
             {/* Title */}
-            <h1 className="text-h4 mt-15">
+            <h1 className="text-h8 md:text-h4 mt-15">
             Pertanyaan yang Sering Diajukan
             </h1>
         </div>
 
         {/* List */}
-        <div className="mt-45 space-y-15">
+        <div className="mt-25 md:mt-45 space-y-15">
           {visibleFaqs.map((item, i) => (
             <FaqCard
               key={i}
@@ -118,11 +118,11 @@ export default function FAQ() {
 
         {/* Footer Link */}
         {!showAll && faqs.length > 6 && (
-          <div className="mt-45 text-center">
+          <div className="mt-25 md:mt-45 text-center">
             <button
               type="button"
               onClick={() => setShowAll(true)}
-              className="text-blue text-h7 hover:text-blue/70 hover:cursor-pointer transition"
+              className="text-blue text-s2 md:text-h7 hover:text-blue/70 hover:cursor-pointer transition"
             >
               Lihat Selengkapnya
             </button>

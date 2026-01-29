@@ -14,7 +14,7 @@ export default function About() {
           {/* Label */}
           <div className="flex items-center gap-5">
             <img src={aboutIcon} alt="Tentang Kami" className="h-[14px] md:h-25 text-primary" />
-            <span className="text-s4 md:text-h8">
+            <span className="text-s3 md:text-h8">
               Tentang Kami
             </span>
           </div>

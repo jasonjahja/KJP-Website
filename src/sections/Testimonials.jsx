@@ -70,7 +70,7 @@ export default function Testimonial() {
   }, []);
 
   const CARD_WIDTH = 650;
-  const GAP = 25;
+  const GAP = 15;
   const STEP = CARD_WIDTH + GAP;
 
   const offset =
@@ -103,31 +103,31 @@ export default function Testimonial() {
   }, [index]);
 
   return (
-    <section id="testimonials" className="w-full py-120 text-bw8">
+    <section id="testimonials" className="w-full py-60 md:py-120 text-bw8">
         
         {/* HEADER (FULL WIDTH) */}
-        <div className="mx-120">
+        <div className="mx-25 md:mx-120">
             
             {/* Label */}
             <div className="flex items-center gap-5">
-            <img src={testiIcon} alt="Testimonial" className="h-25 text-primary" />
-            <span className="text-h8 text-bw8">
+            <img src={testiIcon} alt="Testimonial" className="h-[14px] md:h-25 text-primary" />
+            <span className="text-s3 md:text-h8 text-bw8">
                 Testimoni
             </span>
             </div>
 
             {/* Title */}
-            <h1 className="text-h4 mt-15">
+            <h1 className="text-h8 md:text-h4 mt-15">
                 Pengalaman Klien Bekerja Sama dengan Kami
             </h1>
 
-            <p className="mt-15 text-b2">
+            <p className="mt-15 text-b5 md:text-b2">
                 Bukti nyata kualitas layanan kami dari sudut pandang klien yang telah bekerja sama.
             </p>
         </div>
 
         {/* Carousel Section */}
-        <div className="relative mt-60">
+        <div className="relative mt-25 md:mt-60">
 
             {/* Track viewport */}
             <div
@@ -135,7 +135,7 @@ export default function Testimonial() {
               className="overflow-hidden"
             >
               <div
-                className="flex gap-25 items-stretch transition-transform duration-300"
+                className="flex gap-15 items-stretch transition-transform duration-300"
                 style={{
                   transform: `translateX(-${offset}px)`,
                 }}
@@ -155,7 +155,7 @@ export default function Testimonial() {
         </div>
 
         {/* Bottom Row: Summary + Arrows */}
-        <div className="mx-120 mt-45 flex items-center justify-between">
+        <div className="mx-25 md:mx-120 mt-10 md:mt-45 flex items-center justify-between">
 
             {/* Summary */}
             <div className="flex flex-col gap-5">
@@ -164,21 +164,21 @@ export default function Testimonial() {
               <div className="flex items-center gap-10">
                 <div className="flex">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <img key={i} src={star} alt="star" className="w-30" />
+                    <img key={i} src={star} alt="star" className="w-[20px] md:w-30" />
                   ))}
                 </div>
 
-                <div className="text-h5 text-primary">Sempurna</div>
+                <div className="text-h8 md:text-h5 text-primary">Sempurna</div>
               </div>
 
               {/* Row 2: description */}
-              <div className="text-b1">
-                <span className="text-h6 text-primary">5.0 </span> <span>dari 5 berdasarkan 5 ulasan</span>
+              <div className="text-b5 md:text-b1">
+                <span className="text-s2 md:text-h6 text-primary">5.0 </span> <span>dari 5 berdasarkan 5 ulasan</span>
               </div>
             </div>
 
             {/* Arrows */}
-            <div className="flex gap-30">
+            <div className="flex gap-30 hidden md:flex">
                 <button
                   onClick={prev}
                   className="w-30 shrink-0 flex items-center justify-center hover:cursor-pointer"

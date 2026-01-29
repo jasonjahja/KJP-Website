@@ -53,8 +53,8 @@ export default function Services() {
       <div className="items-center text-center">
         {/* Label */}
         <div className="flex gap-5 justify-center items-center">
-          <img src={serviceIcon} alt="Layanan" className="h-[12px] md:h-25 text-primary" />
-          <span className="text-s4 md:text-h8">
+          <img src={serviceIcon} alt="Layanan" className="h-[14px] md:h-25 text-primary" />
+          <span className="text-s3 md:text-h8">
             Layanan
           </span>
         </div>
