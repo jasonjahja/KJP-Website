@@ -120,7 +120,7 @@ function Footer() {
           </p>
 
           <a
-            href="/COMPANY PROFILE 2022_260121_235038.pdf"
+            href="/company-profile-2022.pdf"
             className="underline hover:text-primary transition"
             target="_blank"
             rel="noopener noreferrer"
