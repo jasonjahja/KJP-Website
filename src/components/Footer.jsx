@@ -24,11 +24,11 @@ function Footer() {
             </div>
 
             {/* INFO */}
-            <div className="space-y-15 text-b5 xl:text-b3">
+            <div className="space-y-15 text-b5 xl:text-b3 max-w-[325px]">
               <p>NIB: 9120*****0363</p>
               <p>Berdiri sejak 2012</p>
               <p>
-                Alamat: Jln. Dharma Bakti no. 20 <br />
+                Alamat: Jln. Dharma Bakti no. 20
                 Sigunggung – Pekanbaru, Riau
               </p>
               <p>Terdaftar resmi di Indonesia</p>
