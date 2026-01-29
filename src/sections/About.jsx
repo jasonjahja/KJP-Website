@@ -6,7 +6,7 @@ export default function About() {
     <section id="about" className="w-full text-bw8">
       <div
         className="
-          max-w-[1440px] mx-25 my-60 xl:m-120
+          max-w-[1440px] px-25 py-60 xl:p-120
         "
       >
         {/* HEADER (FULL WIDTH) */}
